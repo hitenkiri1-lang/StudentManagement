@@ -26,9 +26,9 @@ A Java Swing desktop application developed using NetBeans 17 for managing studen
   
 ---
 
-## 🗄 Database Setup
+🗄 Database Setup
 
-### 1️⃣ Create Database
+1️⃣ Create Database
 ```sql
 CREATE DATABASE student_management;
 
@@ -87,4 +87,5 @@ String password = "your_password";
 📄 License
 
 This project is for educational purposes only.
+
 
