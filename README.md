@@ -1,41 +1,71 @@
 # Student Management System
 
-A Java Swing desktop application developed using NetBeans 17 for managing students, courses, scores, and marksheets with MySQL database support.
+A Java Swing desktop application developed using **NetBeans 17** for managing students, courses, scores, and marksheets with **MySQL database** support.
 
 ---
 
 ## Features
-- Admin login system
-- Student add, update, delete, and search
-- Course management (semester-wise)
-- Score management
-- CGPA calculation
-- Marksheet generation
-- Student image upload
-- MySQL database integration
+
+- Admin login system  
+- Student add, update, delete, and search  
+- Course management (semester-wise)  
+- Score management  
+- CGPA calculation  
+- Marksheet generation  
+- Student image upload  
+- MySQL database integration  
 
 ---
 
 ## Technologies Used
-- Java (JDK 17)
-- Java Swing
-- NetBeans IDE 17
-- MySQL
-- JDBC
-- JCalendar (JDateChooser)
-  
+
+- Java (JDK 17)  
+- Java Swing  
+- NetBeans IDE 17  
+- MySQL  
+- JDBC  
+- JCalendar (JDateChooser)  
+
 ---
 
-🗄 Database Setup
+## Project Structure
 
-1️⃣ Create Database
-```sql
-CREATE DATABASE student_management;
+StudentManagement  
+│  
+├── src  
+│   ├── student  
+│   │   ├── Home.java  
+│   │   ├── login.java  
+│   │   ├── Student.java  
+│   │   ├── Course.java  
+│   │   ├── Score.java  
+│   │   └── MarkSheet.java  
+│   │  
+│   ├── db  
+│   │   └── MyConnection.java  
+│   │  
+│   └── icon  
+│       ├── visible.png  
+│       └── invisible.png  
+│  
+├── student_management.sql  
+├── nbproject  
+├── build.xml  
+├── manifest.mf  
+└── README.md  
 
-2️⃣ Import SQL File
-db/student_management.sql
+---
 
-3️⃣ Tables Used
+## Database Setup
+
+### Create Database
+    ```sql
+    CREATE DATABASE student_management;
+
+##Import SQL File:-
+student_management.sql
+
+Tables Used
 
 admin
 
@@ -45,47 +75,44 @@ course
 
 score
 
------
-🔑 Admin Login (Default)
-INSERT INTO admin (username, password)
-VALUES ('admin', 'admin123');
+## 🔑 Admin Login (Default)
 
+    ```sql
+    INSERT INTO admin (id,username, password)
+    VALUES (1,'admin', '123');
 
-------
-🔌 Database Configuration
+## 🔌 Database Configuration
 
 Edit the file:
 
 src/db/MyConnection.java
 
+Example configuration:
 
-Example:
+    ```java
+    String url = "jdbc:mysql://localhost:3306/student_management";
+    String user = "root";
+    String password = "your_password";
 
-String url = "jdbc:mysql://localhost:3306/student_management";
-String user = "root";
-String password = "your_password";
+## ▶ How to Run the Project
 
-------
-▶ How to Run the Project
-  Using NetBeans 17
-  Open NetBeans
-  Click File → Open Project
-  Select the project folder
-  Right-click project → Run
-  Login using admin credentials
--------
+1. Open **NetBeans 17**
+2. Click **File → Open Project**
+3. Select the project folder
+4. Add required libraries
+5. Right-click the project → **Run:login.java**
+6. Login using admin credentials
 
-📦 Required Libraries
-  Add these libraries to NetBeans:
+## 📦 Required Libraries
 
-  MySQL Connector/J
+- **MySQL Connector/J**  
   https://dev.mysql.com/downloads/connector/j/
-    
-  JCalendar (JDateChooser)
+
+- **JCalendar (JDateChooser)**  
   https://toedter.com/jcalendar/
---------
-📄 License
 
-This project is for educational purposes only.
+- add JCalender and mysql connector in netbeans
 
+## 📄 License
 
+This project is for **educational purposes only**.
