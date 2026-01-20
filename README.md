@@ -23,64 +23,49 @@ A Java Swing desktop application developed using NetBeans 17 for managing studen
 - MySQL
 - JDBC
 - JCalendar (JDateChooser)
-
+  
 ---
 
-## Project Structure
-StudentManagement/
-│
-├── src/
-│   ├── student/
-│   │   ├── Home.java
-│   │   ├── login.java
-│   │   ├── Student.java
-│   │   ├── Course.java
-│   │   ├── Score.java
-│   │   └── MarkSheet.java
-│   │
-│   ├── db/
-│   │   └── MyConnection.java
-│   │
-│   └── icon/
-│       ├── visible.png
-│       └── invisible.png
-│
-├── db/
-│   └── student_management.sql
-│
-├── nbproject/
-├── build.xml
-├── manifest.mf
-└── README.md
+## 🗄 Database Setup
 
+### 1️⃣ Create Database
+```sql
+CREATE DATABASE student_management;
 
-🗄 Database Setup
-1. Create database:
-  CREATE DATABASE student_management;
-2.Import SQL file:
-  db/student_management.sql
-3.Tables used:
-  admin
-  student
-  course
-  score
+2️⃣ Import SQL File
+db/student_management.sql
 
+3️⃣ Tables Used
 
+admin
+
+student
+
+course
+
+score
+
+-----
 🔑 Admin Login (Default)
-Insert admin credentials into database:
-
 INSERT INTO admin (username, password)
 VALUES ('admin', 'admin123');
 
 
-
+------
 🔌 Database Configuration
-Edit MyConnection.java:
+
+Edit the file:
+
+src/db/MyConnection.java
+
+
+Example:
 
 String url = "jdbc:mysql://localhost:3306/student_management";
 String user = "root";
 String password = "your_password";
 
+------
 ▶ How to Run the Project
   Using NetBeans 17
   Open NetBeans
@@ -88,6 +73,7 @@ String password = "your_password";
   Select the project folder
   Right-click project → Run
   Login using admin credentials
+-------
 
 📦 Required Libraries
   Add these libraries to NetBeans:
@@ -97,7 +83,8 @@ String password = "your_password";
     
   JCalendar (JDateChooser)
   https://toedter.com/jcalendar/
-
+--------
 📄 License
 
 This project is for educational purposes only.
+
