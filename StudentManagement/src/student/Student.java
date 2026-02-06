@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package student;
 
 import db.MyConnection;
@@ -12,10 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author hiten
- */
+
 public class Student {
 
     Connection con = MyConnection.getConnection();
@@ -181,3 +174,4 @@ public class Student {
         }
     }
 }
+
